@@ -2,3 +2,7 @@
 2- npm i express 
 3- npm i nodemon
 4- "start": "nodemon app.js"
+5- npm i mongoose
+6- npm i dotenv
+7- use postman for request
+8- npm i body-parser
