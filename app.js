@@ -2,11 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 require("dotenv/config");
 
-app.use(bodyParser.json());
-
 // Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
 // app.use(`/posts`, () => {
 //      console.log("Middleware is available on express and Running");

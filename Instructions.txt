@@ -6,3 +6,4 @@
 6- npm i dotenv
 7- use postman for request
 8- npm i body-parser
+9- npm i cors
