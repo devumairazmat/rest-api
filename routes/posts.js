@@ -30,11 +30,24 @@ router.post(`/`, async(req, res) => {
    }
 });
 
+// get Post by ID
 router.get('/:postId' , async (req,res) => {
   console.log(req.params.postId);
   try{
    const post = await Post.findById(req.params.postId);
    res.json(post);
+  }
+  catch(err) {
+    res.json({message: err});
+  }
+})
+
+// Delte Post By Id
+
+router.delete('/:postId', async (req, res) => {
+  try {
+    const removedPost = await Post.remove({_id: req.params.postId});
+    res.json(removedPost);
   }
   catch(err) {
     res.json({message: err});
